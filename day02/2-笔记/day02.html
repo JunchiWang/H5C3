@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+audio+video
+    1、audio+video     controls+autoplay+loop   (由于谷歌浏览器对autoplay属性不支持，所以导致初次进入不能自动播放添加属性muted即可)
+
+    2、video  (一般值设置一个值width||height)
+
+    3、source标签
+
+2、querySelector("#aa")  ||  querySelectorAll()
+    querySelector("li")
+    querySelectorAll("li")   伪数组
+
+
+
+    jquery:                    dom：
+
+    $(obj).addClass()          obj.classList.add()    
+    $(obj).removeClass()       obj.classList.remove()
+    $(obj).hasClass()          obj.classList.contains()
+    $(obj).toggleClass()       obj.classList.toggle()
+
+
+    dom:   obj.className=""          会对元素原先所有的类名进行覆盖
+    html5: obj.classList.add()       会在原先的基础上进行追加
+
+3、回顾
+dom:      obj.setAttribute()     obj.getAttribute()  
+jquery:   
+    $(obj).attr("class")
+    $(obj).prop()      属性值不能改变checked+disabled+selected
+
+4、dataset 获取属性
+html5:
+    <li  data-aa-bb="123"></li>
+    obj.dataset["aaBb"]
+jquery:
+    $("li").attr("data-aa-bb")
+    $("li").data("aaBb")
+
+
+5、fullscreen
+    1、js的兼容性处理   加前缀
+        google+apple+360+qq       内核：webkit
+        火狐                      内核：moz
+        欧朋                      内核：o
+        ie                        内核：ms
+    2、实现全屏和退出全屏对象不一样
+        实现全屏：具体对象调用     RequestFullScreen()方法
+        退出全屏：document对象调用 CancelFullScreen()方法
+    3、火狐最标准的
+
+
+
+6、fileReader
+对象：万物皆对象  
+对象是研究什么：三要素======属性+方法+回调函数
+图片的即时预览：new FileReader()
+
+
+1、input表单绑定oncahnge事件，触发获取文件读取对象   var  reader=new  FileReader()
+2、获取选中的文件    input的files     数组类型     
+    var file=document.querySelector("#myFile").files;
+3、调用对象的方法  读取文件      reader.readAsDataURL(file[0])
+4、什么时候读取完毕： reader.onload=function(){
+        5、读取后会把图片存放在对象属性中   reader.result     ======转码base64
+        6、显示图片   img.src=reader.result
+}
+
+
+<!-- 百度地图 -->
+1、登录  
+2、控制台
+3、创建应用
+4、表单(项目的名字)+ip(随意写一个)
+
+5、开发文档  jsapi
+
+
+
+
+
+
+
+
+
+
+
+    obj.classList.add("aa")  ||obj.classList.remove("aa") ||obj.classList.contains("aa")
+
+    <li data-id-name="123"></li>   
+    obj.dataset["idName"] || $(obj).attr("data-id-name") || $(obj).data("idName")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+</body>
+</html>
